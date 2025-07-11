@@ -1,50 +1,93 @@
 import Image from "next/image";
+import {
+  FaUserTie,
+  FaUtensils,
+  FaMoneyBillWave,
+  FaMapMarkedAlt,
+  FaBoxOpen,
+  FaTruckMoving,
+} from "react-icons/fa";
 
-const destinations = [
-  { from: "Chisinau", to: "Berlin", price: 34, img: "/vercel.svg" },
-  { from: "Chisinau", to: "Luxembourg", price: 56, img: "/vercel.svg" },
-  { from: "Chisinau", to: "Prague", price: 32, img: "/vercel.svg" },
-  { from: "Chisinau", to: "Rotterdam", price: 28, img: "/vercel.svg" },
-  { from: "Chisinau", to: "Vienna", price: 40, img: "/vercel.svg" },
-  { from: "Chisinau", to: "Paris", price: 60, img: "/vercel.svg" },
-];
 
 export default function PopularDestinations() {
-  return (
-    <section className="w-full max-w-6xl mx-auto py-10  px-4">
-      <h2 className="text-2xl font-bold text-white mb-6">
-        Popular destinations with departure from Chisinau
-      </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        {destinations.map((dest, i) => (
-          <div
-            key={i}
-            className="bg-white/90 rounded-xl shadow-md overflow-hidden flex flex-col hover:shadow-xl transition-shadow border border-blue-100"
-          >
-            <div className="relative w-full h-40">
-              <Image
-                src={dest.img}
-                alt={dest.to}
-                fill
-                style={{ objectFit: "cover" }}
-              />
-            </div>
-            <div className="p-4 flex-1 flex flex-col justify-between">
+  
+  
+    return (
+      <section className="bg-blue-50 py-12 pb-24">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-2xl md:text-4xl text-center font-semibold font-bebas text-blue-900 mb-10 ">
+            Our Advantages
+          </h2>
+  
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-blue-900">
+            {/* 1. Customer service */}
+            <div className="flex items-start space-x-4">
+              <FaUserTie className="text-3xl text-blue-600" />
               <div>
-                <div className="text-blue-900 font-semibold text-lg">
-                  {dest.from} → {dest.to}
-                </div>
-                <div className="text-blue-700 font-bold text-xl mt-1">
-                  €{dest.price}
-                </div>
+                <h4 className="font-bold font-inter leading-5">Excellent attitude towards <br /> the customer</h4>
+                <p className="text-sm text-blue-800">
+                  Warm meals in the FREE restaurant for every traveler!
+                </p>
               </div>
-              <button className="mt-4 bg-blue-700 hover:bg-blue-800 text-white font-semibold px-4 py-2 rounded-lg transition-colors">
-                Book
-              </button>
+            </div>
+  
+            {/* 2. Breakfast & Lunch */}
+            <div className="flex items-start space-x-4">
+              <FaUtensils className="text-3xl text-blue-600" />
+              <div>
+                <h4 className="font-bold font-inter leading-5">Breakfast and lunch</h4>
+                <p className="text-sm text-blue-800">
+                  Warm meals in the FREE restaurant for every traveler!
+                </p>
+              </div>
+            </div>
+  
+            {/* 3. Competitive Prices */}
+            <div className="flex items-start space-x-4">
+              <FaMoneyBillWave className="text-3xl text-blue-600" />
+              <div>
+                <h4 className="font-bold font-inter leading-5">Competitive prices</h4>
+                <p className="text-sm text-blue-800">
+                  Probably the best prices and every 10th FREE travel!
+                </p>
+              </div>
+            </div>
+  
+            {/* 4. Transmission from address to address */}
+            <div className="flex items-start space-x-4">
+              <FaMapMarkedAlt className="text-3xl text-blue-600" />
+              <div>
+                <h4 className="font-bold font-inter leading-5">Transmission from <br /> address to address</h4>
+                <p className="text-sm text-blue-800">
+                  Transport and delivery takes place from door to door.
+                </p>
+              </div>
+            </div>
+  
+            {/* 5. Parcel care */}
+            <div className="flex items-start space-x-4">
+              <FaBoxOpen className="text-3xl text-blue-600" />
+              <div>
+                <h4 className="font-bold">Enhanced Parcel Care</h4>
+                <p className="text-sm text-blue-800">
+                  The packages are delivered to the customer's home!
+                </p>
+              </div>
+            </div>
+  
+            {/* 6. Modern Transport */}
+            <div className="flex items-start space-x-4">
+              <FaTruckMoving className="text-3xl text-blue-600" />
+              <div>
+                <h4 className="font-bold">Modern Transport</h4>
+                <p className="text-sm text-blue-800">
+                  Choose a trip with us, and the benefits will be on your side!
+                </p>
+              </div>
             </div>
           </div>
-        ))}
-      </div>
-    </section>
+        </div>
+      </section>
+  
   );
 }
