@@ -9,7 +9,7 @@ import Footer from "../components/Footer";
 
 export default function Home() {
   return (
-    <main className="bg-gradient-to-b from-blue-900 via-blue-800 to-blue-600 min-h-screen flex flex-col">
+    <main className=" min-h-screen flex flex-col">
       <Header />
       <HeroSection />
       <AdvantagesGrid />

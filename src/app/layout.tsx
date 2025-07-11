@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`font-archivo  antialiased`}
+        className={`font-lato  antialiased`}
       >
         {children}
       </body>

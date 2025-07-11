@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import { FaShieldAlt, FaMapMarkedAlt, FaClock, FaComments } from "react-icons/fa";
 export default function HeroSection() {
   return (
     <section
@@ -14,47 +14,35 @@ export default function HeroSection() {
       </div>
 
       {/* Hero content */}
-      <div className="relative z-10 flex flex-col items-center max-w-2xl text-center">
-        <h1 className="text-3xl uppercase md:text-5xl 
+      <div className="relative z-10 flex flex-col items-center max-w-4xl text-center">
+        <h1 className="text-3xl uppercase md:text-7xl 
         font-archivo  font-extrabold text-white mb-6 drop-shadow-lg">
-          Regular trips to Europe & Parcel Delivery
+          Real-Time Road Alerts & Hazard Reporting
         </h1>
 
-       {/* 
-        <form className="w-full bg-white/90 rounded-xl shadow-lg p-4 md:p-6 flex flex-col md:flex-row gap-3 md:gap-4 items-center">
-          <input
-            type="text"
-            placeholder="From"
-            required
-            className="flex-1 px-4 py-2 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-400"
-          />
-          <input
-            type="text"
-            placeholder="To"
-            required
-            className="flex-1 px-4 py-2 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-400"
-          />
-          <input
-            type="date"
-            required
-            className="flex-1 px-4 py-2 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-400"
-          />
-          <input
-            type="number"
-            min="1"
-            max="10"
-            placeholder="Passengers"
-            required
-            className="w-28 px-4 py-2 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-400"
-          />
-          <button
-            type="submit"
-            className="bg-blue-700 hover:bg-blue-800 text-white font-semibold px-6 py-2 rounded-lg shadow transition-colors"
-          >
-            Search
-          </button>
-        </form> */}
+        
+        <div className="w-full  justify-center font-inter tracking-tight bg-white/90 mt-10 rounded-full shadow-lg p-4 md:p-6 flex flex-col md:flex-row gap-3 md:gap-12 items-center">
+        <div className="flex flex-col items-center ">
+          <FaShieldAlt className="text-3xl  mb-2" />
+          <p className="text-sm">Verified Safety Reports</p>
+        </div>
+        <div className="flex flex-col items-center">
+          <FaMapMarkedAlt className="text-3xl  mb-2" />
+          <p className="text-sm">Live Hazard Mapping</p>
+        </div>
+        <div className="flex flex-col items-center">
+          <FaClock className="text-3xl  mb-2" />
+          <p className="text-sm">Real-Time Updates</p>
+        </div>
+        <div className="flex flex-col items-center">
+          <FaComments className="text-3xl  mb-2" />
+          <p className="text-sm">24/7 Chatbot Support</p>
+        </div>
       </div>
+        
+        </div>
+        
+     
     </section>
   );
 }

@@ -11,7 +11,7 @@ const destinations = [
 
 export default function PopularDestinations() {
   return (
-    <section className="w-full max-w-6xl mx-auto py-10 px-4">
+    <section className="w-full max-w-6xl mx-auto py-10  px-4">
       <h2 className="text-2xl font-bold text-white mb-6">
         Popular destinations with departure from Chisinau
       </h2>
