@@ -59,6 +59,10 @@ export default function AboutSection() {
           </div>
         </div>
       </div>
+      <div className="flex justify-center">
+
+      <img src="/images/diag-1.png" className="size-[42rem] pt-16" alt="" />
+      </div>
     </section>
   )
 }

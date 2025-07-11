@@ -6,6 +6,7 @@ import PopularDestinations from "../components/PopularDestinations";
 import AboutSection from "../components/AboutSection";
 import Testimonials from "../components/Testimonials";
 import Footer from "../components/Footer";
+import ConsultingHero from "@/components/ConsultingHero";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <PopularDestinations />
       <ServiceOverview />
       <AboutSection />
+      <ConsultingHero/>
       <Testimonials />
       <Footer />
     </main>

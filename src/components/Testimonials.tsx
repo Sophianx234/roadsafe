@@ -1,63 +1,51 @@
+import { FaQuoteLeft } from 'react-icons/fa';
+
 const testimonials = [
   {
-    name: "Maria S.",
-    rating: 5,
-    review:
-      "Excellent service! The bus was comfortable and the staff very friendly. Highly recommend.",
+    name: "Jenn Smith",
+    role: "Head of Finance",
+    quote: "One Bank Is A Truly Great Bank",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+    avatar: "/images/user-1.jpg", // replace with real image paths
   },
   {
-    name: "Alex P.",
-    rating: 4,
-    review:
-      "Fast parcel delivery and great prices. My package arrived safely and on time.",
+    name: "Adam White",
+    role: "Investment Advisor",
+    quote: "You Have Found The Best Bank",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+    avatar: "/images/user-1.jpg",
   },
   {
-    name: "Elena D.",
-    rating: 5,
-    review:
-      "Very professional drivers and clean buses. Will use again for my next trip.",
-  },
-  {
-    name: "Victor T.",
-    rating: 4,
-    review:
-      "Easy booking process and helpful support. Good experience overall.",
+    name: "Cris Lee",
+    role: "CEO at Monex",
+    quote: "The Best Customer Service, Period",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+    avatar: "/images/user-1.jpg",
   },
 ];
 
-function Stars({ count }: { count: number }) {
-  return (
-    <div className="flex gap-0.5 mb-2">
-      {Array.from({ length: 5 }).map((_, i) => (
-        <span
-          key={i}
-          className={i < count ? "text-yellow-400" : "text-gray-300"}
-        >
-          ★
-        </span>
-      ))}
-    </div>
-  );
-}
-
 export default function Testimonials() {
   return (
-    <section className="w-full bg-blue-950/80 py-12 px-4">
-      <div className="max-w-5xl mx-auto">
-        <h2 className="text-2xl font-bold text-white mb-6">
-          What do our customers say about us?
-        </h2>
-        <div className="flex gap-6 overflow-x-auto pb-2">
-          {testimonials.map((t, i) => (
-            <div
-              key={i}
-              className="min-w-[260px] bg-white/90 rounded-xl shadow-md p-6 flex flex-col items-start border border-blue-100"
-            >
-              <Stars count={t.rating} />
-              <p className="text-blue-900 font-medium mb-2">{t.review}</p>
-              <span className="text-blue-700 font-semibold mt-auto">
-                {t.name}
-              </span>
+    <section className="bg-gray-100 py-16 px-6">
+      <div className="max-w-6xl mx-auto text-center">
+        <h2 className="text-3xl font-semibold mb-12">You're in good company</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {testimonials.map((t, index) => (
+            <div key={index} className="bg-white p-6  w-80 rounded-xl shadow hover:shadow-lg transition">
+              <FaQuoteLeft className="text-gray-300 text-2xl mb-4" />
+              <h3 className="text-lg font-semibold mb-2">“{t.quote}”</h3>
+              <p className="text-sm text-gray-600 mb-6">{t.description}</p>
+              <div className="flex items-center gap-4">
+                <img
+                  src={t.avatar}
+                  alt={t.name}
+                  className="w-10 h-10 rounded-full object-cover"
+                />
+                <div className="text-left">
+                  <p className="font-medium">{t.name}</p>
+                  <p className="text-xs text-gray-500">{t.role}</p>
+                </div>
+              </div>
             </div>
           ))}
         </div>
