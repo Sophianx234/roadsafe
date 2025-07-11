@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Logo from "./Logo";
 
 const navLinks = [
   { name: "Home", href: "#" },
@@ -11,12 +12,7 @@ export default function Header() {
   return (
     <header className="w-full bg-white backdrop-blur sticky top-0 z-30 shadow-md">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
-        <div className="flex items-center gap-1">
-          <Image src="/images/logo.png" alt="Logo" width={40} height={40} />
-          <span className="text-orange-400 font-bold uppercase text-xl  ">
-           <span className="font-lato text-blue-500">Road</span> <span className="font-archivo  tracking-wide">Safe</span>
-          </span>
-        </div>
+        <Logo/>
         <nav className="hidden md:flex gap-8 items-center">
           {navLinks.map((link) => (
             <a

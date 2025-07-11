@@ -9,8 +9,8 @@ export default function ServiceOverview() {
 
   return (
     <section className="relative pt-32  bg-white">
-      <div className='w-full   py-20 text-white px-6 md:px-0'>
-    <div className='bg-blue-600 mx-2 h-full py-16 pl-16 '>
+      <div className='w-full    text-white px-6 md:px-0'>
+    <div className='bg-blue-600 mx-20 h-full py-24 rounded-xl pl-16 '>
 
       <div className=" flex flex-col md:flex-row items-center justify-between gap-12 ">
         
@@ -49,7 +49,7 @@ export default function ServiceOverview() {
               alt="App Phone UI"
               width={400}
               height={800}
-              className=" w-64  absolute right-16 "
+              className=" w-72  absolute right-28 "
               />
           
       </div>
