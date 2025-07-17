@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Logo from "./Logo";
+import Link from "next/link";
 
 const navLinks = [
   { name: "Home", href: "#" },
@@ -24,12 +25,12 @@ export default function Header() {
             </a>
           ))}
         </nav>
-          <a
-            href="#"
+          <Link
+            href="login"
             className="ml-4 bg-orange-400 hover:bg-orange-500 text-white font-semibold px-5 py-2 rounded-full shadow transition-colors"
           >
-            Signup
-          </a>
+            Login
+          </Link>
         {/* Hamburger for mobile (no logic yet) */}
         <button className="md:hidden flex flex-col gap-1 group">
           <span className="w-6 h-0.5 bg-blue-900 block"></span>

@@ -6,7 +6,7 @@ export default function HeroSection() {
       className="relative bg-[url('/images/car-3.jpg')] bg-cover bg-center bg-no-repeat w-full flex flex-col items-center justify-center min-h-[100dvh]"
     >
       {/* Optional gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/60 to-black/60 z-0" />
+      <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/60 to-black/60 z-0" ></div>
 
       {/* Optional decorative image overlay */}
       <div className="absolute inset-0 opacity-20 pointer-events-none select-none z-0">

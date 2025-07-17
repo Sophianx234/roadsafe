@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import { CiMail } from "react-icons/ci";
 import { IoEyeOffOutline, IoEyeOutline } from "react-icons/io5";
@@ -49,7 +50,7 @@ export default function Login() {
             </Button>
             <div className="flex items-center pt-6 text-sm font-inter px-2 justify-center gap-1">
               <p className="text-gray-500">Don't have an account? </p>
-              <span>Sign Up</span>
+              <Link href='/signup'>Sign Up</Link>
             </div>
           </div>
         </div>
